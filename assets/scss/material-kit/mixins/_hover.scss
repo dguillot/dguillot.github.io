@@ -1,27 +1,9 @@
-
-@mixin hover() {
-  &:hover { @content; }
-}
-
-@mixin hover-focus() {
-  &:hover,
-  &:focus {
+@mixin bmd-hover-focus-active {
+  // add the .active to the whole mix of hover-focus-active
+  &.active {
     @content;
   }
-}
-
-@mixin plain-hover-focus() {
-  &,
-  &:hover,
-  &:focus {
-    @content;
-  }
-}
-
-@mixin hover-focus-active() {
-  &:hover,
-  &:focus,
-  &:active {
+  @include hover-focus-active() {
     @content;
   }
 }

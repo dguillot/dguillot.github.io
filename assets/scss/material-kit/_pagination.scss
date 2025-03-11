@@ -1,58 +1,98 @@
-.page-item {
-  &.active .page-link {
-    box-shadow: $pagination-active-box-shadow;
-  }
+.pagination{
+    > .page-item > .page-link,
+    > .page-item > span{
+        border: 0;
+        border-radius: 30px !important;
+        transition: all .3s;
+        padding: 0px 11px;
+        margin: 0 3px;
+        min-width: 30px;
+        height: 30px;
+        line-height: 30px;
+        color: $gray-color;
+        font-weight: $font-weight-default;
+        font-size: $mdb-btn-font-size-base;
+        text-transform: uppercase;
+        background: transparent;
+        text-align: center;
 
-  .page-link,
-  span {
-    display: $page-link-display;
-    align-items: $page-link-align-items;
-    justify-content: $page-link-justify-content;
-    color: $secondary;
-    padding: 0;
-    margin: $page-link-margin;
-    border-radius: $page-link-radius !important;
-    width: $page-link-width;
-    height: $page-link-height;
-    font-size: $font-size-sm;
-  }
-}
-
-.pagination-lg {
-  .page-item {
-    .page-link,
-    span {
-      width: $page-link-width-lg;
-      height: $page-link-height-lg;
-      line-height: $page-link-line-height-lg;
+        &:hover,
+        &:focus{
+            color: $gray-color;
+        }
     }
-  }
-}
 
-.pagination-sm {
-  .page-item {
-    .page-link,
-    span {
-      width: $page-link-width-sm;
-      height: $page-link-height-sm;
-      line-height: $page-link-line-height-sm;
-    }
-  }
-}
+    > .page-item.active > a,
+    > .page-item.active > span{
+        color: $gray-color;
 
-
-// Colors
-.pagination {
-  @each $name, $value in $theme-gradient-colors {
-    &.pagination-#{$name} {
-      .page-item.active > .page-link {
         &,
         &:focus,
-        &:hover {
-          @include gradient-directional(nth($value, 1) 0%, nth($value, -1) 100%, $deg: 195deg);
-          border: none;
+        &:hover{
+            background-color: $brand-primary;
+            border-color: $brand-primary;
+            color: $white-color;
+            @include shadow-4dp-color($brand-primary);
         }
-      }
+
     }
+
+    // Colors
+    &.pagination-info{
+        > .page-item.active > a,
+        > .page-item.active > span{
+            &,
+            &:focus,
+            &:hover{
+                background-color: $brand-info;
+                border-color: $brand-info;
+                @include shadow-4dp-color($brand-info);
+            }
+        }
+    }
+
+    &.pagination-success{
+        > .page-item.active > a,
+        > .page-item.active > span{
+            &,
+            &:focus,
+            &:hover{
+                background-color: $brand-success;
+                border-color: $brand-success;
+                @include shadow-4dp-color($brand-success);
+            }
+        }
+    }
+
+    &.pagination-warning{
+        > .page-item.active > a,
+        > .page-item.active > span{
+            &,
+            &:focus,
+            &:hover{
+                background-color: $brand-warning;
+                border-color: $brand-warning;
+                @include shadow-4dp-color($brand-warning);
+            }
+        }
+    }
+
+    &.pagination-danger{
+        > .page-item.active > a,
+        > .page-item.active > span{
+            &,
+            &:focus,
+            &:hover{
+                background-color: $brand-danger;
+                border-color: $brand-danger;
+                @include shadow-4dp-color($brand-danger);
+            }
+        }
+    }
+}
+
+.pagination {
+  .page-item .page-link:focus {
+    box-shadow: none;
   }
 }
