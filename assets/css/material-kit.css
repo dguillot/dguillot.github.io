@@ -29,7 +29,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -340,7 +340,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -4059,7 +4059,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -4144,7 +4144,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7577,7 +7577,7 @@ legend {
   border-bottom: 0; }
 
 .serif-font {
-  font-family: "Roboto Slab", "Times New Roman", serif; }
+  font-family: "Open Sans", "Times New Roman", serif; }
 
 * {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -10543,7 +10543,7 @@ footer {
   color: #e91e63; }
 
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   font-weight: 300;
   line-height: 1.5em; }
 
@@ -10605,7 +10605,7 @@ small,
 .footer-big h4,
 .media .media-heading {
   font-weight: 700;
-  font-family: "Roboto Slab", "Times New Roman", serif; }
+  font-family: "Open Sans", "Times New Roman", serif; }
   .title,
   .title a,
   .card-title,
@@ -12601,7 +12601,7 @@ thead.thead-inverse th,
     width: 100%; }
 
 .media .media-heading small {
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif; }
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif; }
 
 .media .media-body {
   padding-right: 10px; }
