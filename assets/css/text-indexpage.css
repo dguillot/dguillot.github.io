@@ -75,3 +75,10 @@
     transform: translateY(-400%);
   }
 }
+
+/* Navbar Logo */ 
+.navbar-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+}
