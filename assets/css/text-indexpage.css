@@ -8,11 +8,11 @@
   color: inherit;
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
-  font-size: 30px;
+  font-size: clamp(2.5rem, 2vw + 1rem, 6.25rem);
   box-sizing: content-box;
   display: inline-flex;
   gap: 8px;
-  height: 50px;
+  height: 70px;
 }
 
 .words {
