@@ -22,7 +22,7 @@
   background-position: 35% 38%, 65% 26%, 45% 72%, 30% 80%, 72% 78%, 50% 50%;
   mix-blend-mode: screen;
   opacity: 0.4;
-  animation: neonPulse 7s ease-in-out infinite, colorShift 1s ease-in-out infinite, glitchNoise 5.8s steps(3, end) infinite;
+  animation: neonPulse 4s ease-in-out infinite, colorShift 1s ease-in-out infinite, glitchNoise 5.8s steps(3, end) infinite;
   pointer-events: none;
   z-index: 1;
 }
@@ -163,11 +163,12 @@
     transform: translate3d(0, 0, 0);
   }
 }
+
 .carouloader {
   color: inherit;
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
-  font-size: clamp(1rem, 2vw + 1rem, 6.25rem);
+  font-size: clamp(1rem, 2vw + 1rem, 6rem);
   box-sizing: content-box;
   display: inline-flex;
   gap: 8px;
