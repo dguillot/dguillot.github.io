@@ -168,7 +168,7 @@
   color: inherit;
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
-  font-size: clamp(1rem, 2vw + 1rem, 6rem);
+  font-size: clamp(0.5rem, 2vw, 4rem);
   box-sizing: content-box;
   display: inline-flex;
   gap: 8px;
