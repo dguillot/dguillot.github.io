@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Version types · It Used To Say</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="css/custom.css" rel="stylesheet">
+</head>
+<body data-page="versions">
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top border-bottom border-secondary-subtle">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">It Used To <span>Say</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" data-nav="movies" href="movies.html">Movies</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="versions" href="versions.html">Version types</a></li>
+          <li class="nav-item"><a class="nav-link" data-nav="about" href="about.html">About</a></li>
+        </ul>
+        <a class="btn btn-sm btn-accent" href="submit.html">Submit a change</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <p class="kicker mb-2">Glossary</p>
+    <h1 class="mb-3">Version types</h1>
+    <p class="text-muted-2 col-lg-8 mb-5">The same movie can exist in several audio masters. This site tracks dialogue that changed between them — not every missing shot or trimmed fight.</p>
+
+    <div class="row g-4">
+      <div class="col-md-6">
+        <article class="version-card p-4 h-100">
+          <span class="badge badge-tv mb-3">TV</span>
+          <h2 class="h4">Broadcast / basic cable</h2>
+          <p class="mb-2">Swears are muted, bleeped, or replaced with a new line recorded later (ADR). “Mr. Falcon” and “stranger in the Alps” live here.</p>
+          <p class="small text-muted-2 mb-0">Example: Die Hard 2</p>
+        </article>
+      </div>
+      <div class="col-md-6">
+        <article class="version-card p-4 h-100">
+          <span class="badge badge-airline mb-3">Airline</span>
+          <h2 class="h4">In-flight edit</h2>
+          <p class="mb-2">Studios or inflight editors strip language, sex, and sometimes plane-crash talk. Dialogue is often redubbed rather than just muted.</p>
+          <p class="small text-muted-2 mb-0">Example: cleaned comedy audio on long-haul flights</p>
+        </article>
+      </div>
+      <div class="col-md-6">
+        <article class="version-card p-4 h-100">
+          <span class="badge badge-streaming mb-3">Streaming</span>
+          <h2 class="h4">Platform master</h2>
+          <p class="mb-2">A service ships a TV master by mistake, or quietly swaps a word in a documentary. These changes can appear and disappear without a note.</p>
+          <p class="small text-muted-2 mb-0">Example: Free Solo on Disney+</p>
+        </article>
+      </div>
+      <div class="col-md-6">
+        <article class="version-card p-4 h-100">
+          <span class="badge badge-rating mb-3">Ratings cut</span>
+          <h2 class="h4">Board / market cut</h2>
+          <p class="mb-2">A line is changed to hit PG-13 instead of R, or to pass a national board. Sometimes only a few words move and the runtime barely changes.</p>
+          <p class="small text-muted-2 mb-0">Example: BBFC dialogue substitutions</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="row g-4 mt-1">
+      <div class="col-md-4">
+        <article class="version-card p-4 h-100">
+          <span class="badge badge-replaced mb-2">Replaced</span>
+          <p class="mb-0">A new word or sentence is dubbed over the original.</p>
+        </article>
+      </div>
+      <div class="col-md-4">
+        <article class="version-card p-4 h-100">
+          <span class="badge badge-deleted mb-2">Deleted</span>
+          <p class="mb-0">The line is cut. You hear a jump or see a short visual skip.</p>
+        </article>
+      </div>
+      <div class="col-md-4">
+        <article class="version-card p-4 h-100">
+          <span class="badge badge-muted mb-2">Muted</span>
+          <p class="mb-0">The mouth still moves; the audio is silenced or bleeped.</p>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer py-4">
+    <div class="container small d-flex flex-wrap justify-content-between gap-2">
+      <span>It Used To Say · a catalog of replaced and deleted movie lines</span>
+      <span>Built with Bootstrap 5.3.8</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

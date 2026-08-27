@@ -1,0 +1,50 @@
+[
+  {
+    "id": "die-hard-2",
+    "title": "Die Hard 2",
+    "year": 1990,
+    "director": "Renny Harlin"
+  },
+  {
+    "id": "die-hard-with-a-vengeance",
+    "title": "Die Hard with a Vengeance",
+    "year": 1995,
+    "director": "John McTiernan"
+  },
+  {
+    "id": "the-big-lebowski",
+    "title": "The Big Lebowski",
+    "year": 1998,
+    "director": "Joel Coen, Ethan Coen"
+  },
+  {
+    "id": "snakes-on-a-plane",
+    "title": "Snakes on a Plane",
+    "year": 2006,
+    "director": "David R. Ellis"
+  },
+  {
+    "id": "scarface",
+    "title": "Scarface",
+    "year": 1983,
+    "director": "Brian De Palma"
+  },
+  {
+    "id": "free-solo",
+    "title": "Free Solo",
+    "year": 2018,
+    "director": "Elizabeth Chai Vasarhelyi, Jimmy Chin"
+  },
+  {
+    "id": "the-french-connection",
+    "title": "The French Connection",
+    "year": 1971,
+    "director": "William Friedkin"
+  },
+  {
+    "id": "back-to-the-future-part-ii",
+    "title": "Back to the Future Part II",
+    "year": 1989,
+    "director": "Robert Zemeckis"
+  }
+]
