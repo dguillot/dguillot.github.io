@@ -11,22 +11,7 @@
   <link href="css/custom.css" rel="stylesheet">
 </head>
 <body data-page="versions">
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top border-bottom border-secondary-subtle">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">It Used To <span>Say</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" data-nav="movies" href="movies.html">Movies</a></li>
-          <li class="nav-item"><a class="nav-link" data-nav="versions" href="versions.html">Version types</a></li>
-          <li class="nav-item"><a class="nav-link" data-nav="about" href="about.html">About</a></li>
-        </ul>
-        <a class="btn btn-sm btn-accent" href="submit.html">Submit a change</a>
-      </div>
-    </div>
-  </nav>
+  <div data-partial="navbar"></div>
 
   <main class="container py-5">
     <p class="kicker mb-2">Glossary</p>
@@ -63,6 +48,41 @@
           <span class="badge badge-rating mb-3">Ratings cut</span>
           <h2 class="h4">Board / market cut</h2>
           <p class="mb-2">A line is changed to hit PG-13 instead of R, or to pass a national board. Sometimes only a few words move and the runtime barely changes.</p>
+          <p class="small text-muted-2 mb-0">Example: BBFC dialogue substitutions</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6">
+        <article class="version-card p-4 h-100">
+          <span class="badge badge-4k mb-3">4K UHD</span>
+          <h2 class="h4">HDR/Dolby Vision disc</h2>
+          <p class="mb-2">often a new master, sometimes a different cut than the old Blu-ray.</p>
+          <p class="small text-muted-2 mb-0">Example: Die Hard 2</p>
+        </article>
+      </div>
+      <div class="col-md-6">
+        <article class="version-card p-4 h-100">
+          <span class="badge badge-bluray mb-3">Blu-ray</span>
+          <h2 class="h4">HD disc</h2>
+          <p class="mb-2">compare edition to edition, not “Blu-ray” as a single thing.</p>
+          <p class="small text-muted-2 mb-0">Example: Pleasantville on 4K has a line removed</p>
+        </article>
+      </div>
+      <div class="col-md-6">
+        <article class="version-card p-4 h-100">
+          <span class="badge badge-dvd mb-3">DVD</span>
+          <h2 class="h4">SD disc</h2>
+          <p class="mb-2">older transfers, TV masters, and alternate cuts show up here a lot.</p>
+          <p class="small text-muted-2 mb-0">Example: Free Solo on Disney+</p>
+        </article>
+      </div>
+      <div class="col-md-6">
+        <article class="version-card p-4 h-100">
+          <span class="badge badge-vhs mb-3">VHS</span>
+          <h2 class="h4">Analog tape</h2>
+          <p class="mb-2">pan-and-scan and TV audio are common.</p>
           <p class="small text-muted-2 mb-0">Example: BBFC dialogue substitutions</p>
         </article>
       </div>

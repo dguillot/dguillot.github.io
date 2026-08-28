@@ -6,6 +6,13 @@ const TYPE_LABELS = {
   regional: "Regional"
 };
 
+const MEDIUM_LABELS = {
+  "4K": "4K UHD",
+  bluray: "Blu-Ray",
+  dvd: "DVD",
+  vhs: "VHS"
+};
+
 const ACTION_LABELS = {
   replaced: "Replaced",
   deleted: "Deleted",
@@ -26,6 +33,11 @@ function qs(name) {
 
 function badgeType(type) {
   return `<span class="badge badge-${type}">${TYPE_LABELS[type] || type}</span>`;
+}
+
+function badgeMedium(medium) {
+  if (!medium) return "";
+  return `<span class="badge badge-${medium}">${MEDIUM_LABELS[medium] || medium}</span>`;
 }
 
 function badgeAction(action) {
@@ -57,6 +69,7 @@ function renderChangeCard(change, movie, { compact = false } = {}) {
         </div>
         <div class="d-flex gap-1 flex-wrap justify-content-end">
           ${badgeType(change.type)}
+          ${badgeMedium(change.medium)}
           ${badgeAction(change.action)}
         </div>
       </div>
@@ -77,7 +90,7 @@ function renderChangeCard(change, movie, { compact = false } = {}) {
         compact
           ? `<div class="mt-3"><a href="change.html?id=${encodeURIComponent(change.id)}">Full note</a></div>`
           : `<p class="mt-3 mb-1">${escapeHtml(change.notes)}</p>
-             <p class="small text-muted-2 mb-0">${escapeHtml(change.scene)} · ${escapeHtml((change.sources || []).join("; "))}</p>`
+             <p class="small text-muted-2 mb-0">${change.edition ? escapeHtml(change.edition) + " · " : ""}${escapeHtml(change.scene)} · ${escapeHtml((change.sources || []).join("; "))}</p>`
       }
     </article>
   `;
@@ -125,10 +138,12 @@ async function initMovies() {
   const { movies, changes } = await loadData();
   const qInput = document.getElementById("q");
   const typeSelect = document.getElementById("type");
+  const mediumSelect = document.getElementById("medium");
 
   function render() {
     const q = qInput.value.trim().toLowerCase();
     const type = typeSelect.value;
+    const medium = mediumSelect.value;
     const rows = movies
       .map((movie) => {
         const movieChanges = changesForMovie(changes, movie.id);
@@ -138,7 +153,8 @@ async function initMovies() {
         const hay = `${movie.title} ${movie.year}`.toLowerCase();
         const matchQ = !q || hay.includes(q);
         const matchType = !type || movieChanges.some((c) => c.type === type);
-        return matchQ && matchType;
+        const matchMedium = !medium || movieChanges.some((c) => c.medium === medium);
+        return matchQ && matchType && matchMedium;
       });
 
     document.getElementById("movie-count").textContent = `${rows.length} movie${rows.length === 1 ? "" : "s"}`;
@@ -147,12 +163,15 @@ async function initMovies() {
         const types = [...new Set(movieChanges.map((c) => c.type))]
           .map(badgeType)
           .join(" ");
+        const media = [...new Set(movieChanges.map((c) => c.medium).filter(Boolean))]
+          .map(badgeMedium)
+          .join(" ");
         return `
           <tr class="movie-row" onclick="location.href='movie.html?id=${movie.id}'">
-            <td class="fw-semibold">${escapeHtml(movie.title)}</td>
-            <td>${movie.year}</td>
-            <td>${movieChanges.length}</td>
-            <td>${types}</td>
+            <td class="fw-semibold text-white">${escapeHtml(movie.title)}</td>
+            <td class="text-white">${movie.year}</td>
+            <td class="text-white">${movieChanges.length}</td>
+            <td>${types} ${media}</td>
           </tr>
         `;
       })
@@ -161,6 +180,7 @@ async function initMovies() {
 
   qInput.addEventListener("input", render);
   typeSelect.addEventListener("change", render);
+  mediumSelect.addEventListener("change", render);
   render();
 }
 
