@@ -1,6 +1,6 @@
 const TYPE_LABELS = {
   tv: "TV",
-  airline: "Airline",
+  physical: "Physical Media",
   streaming: "Streaming",
   rating: "Ratings cut",
   regional: "Regional"
@@ -214,7 +214,20 @@ async function initChange() {
   `;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+async function loadPartials() {
+  const slots = document.querySelectorAll("[data-partial]");
+  await Promise.all(
+    [...slots].map(async (slot) => {
+      const name = slot.dataset.partial;
+      const res = await fetch(`partials/${name}.html`);
+      if (!res.ok) return;
+      slot.outerHTML = await res.text();
+    })
+  );
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  await loadPartials();
   setActiveNav();
   const page = document.body.dataset.page;
   if (page === "home") initHome();

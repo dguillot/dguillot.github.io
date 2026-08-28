@@ -1,6 +1,6 @@
 # It Used To Say
 
-Static Bootstrap **v5.3.8** site that tracks movie lines replaced, muted, or deleted for TV, airlines, ratings, and streaming.
+Static Bootstrap **v5.3.8** site that tracks movie lines replaced, muted, or deleted for TV, physical media, ratings, and streaming.
 
 ## Run it
 
@@ -24,7 +24,7 @@ Then visit http://localhost:8080
 
 1. Add the film to `data/movies.json` if it is new.
 2. Add an object to `data/changes.json` with `id`, `movieId`, `character`, `original`, `replacement`, `type`, `action`, `scene`, `notes`, `sources`.
-3. `type`: `tv` | `airline` | `streaming` | `rating` | `regional`
+3. `type`: `tv` | `physical` | `streaming` | `rating` | `regional`
 4. `action`: `replaced` | `deleted` | `muted`
 
 ## Pages
