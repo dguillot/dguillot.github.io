@@ -90,7 +90,7 @@ function renderChangeCard(change, movie, { compact = false } = {}) {
         compact
           ? `<div class="mt-3"><a href="change.html?id=${encodeURIComponent(change.id)}">Full note</a></div>`
           : `<p class="mt-3 mb-1">${escapeHtml(change.notes)}</p>
-             <p class="small text-muted-2 mb-0">${change.edition ? escapeHtml(change.edition) + " · " : ""}${escapeHtml(change.scene)} · ${escapeHtml((change.sources || []).join("; "))}</p>`
+             <p class="small text-muted-2 mb-0">${change.edition ? escapeHtml(change.edition) + " · " : ""}${escapeHtml(change.scene)} <br />Reported by: ${escapeHtml((change.sources || []).join("; "))}</p>`
       }
     </article>
   `;
@@ -114,7 +114,7 @@ function setActiveNav() {
 async function initHome() {
   const { movies, changes } = await loadData();
   const featuredIds = [
-    "dh2-falcon",
+    "pleasantville-1998-4k",
     "lebowski-alps",
     "soatap-monkey",
     "scarface-chicken",
@@ -198,6 +198,7 @@ async function initMovie() {
   const deleted = movieChanges.filter((c) => c.action === "deleted").length;
   root.innerHTML = `
     <p class="kicker mb-2">Movie</p>
+    <img src=${movie.poster} alt="${movie.title} ${movie.year}" height="268"></img>
     <h1 class="mb-1">${escapeHtml(movie.title)}</h1>
     <p class="text-muted-2">${movie.year} · ${escapeHtml(movie.director)}</p>
     <p class="mb-4">
