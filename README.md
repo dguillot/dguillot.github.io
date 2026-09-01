@@ -1,6 +1,6 @@
 # It Used To Say
 
-Static Bootstrap **v5.3.8** site that tracks movie lines replaced, muted, or deleted for TV, physical media, ratings, and streaming.
+Site that tracks movie lines replaced, muted, or deleted for TV, physical media, ratings, and streaming.
 
 ## Run it
 
