@@ -5,5 +5,19 @@
     "year": 1998,
     "director": "Gary Ross",
     "poster": "https://image.tmdb.org/t/p/original/sjnRihb0OdmtD5GBe5lfdfBjSxo.jpg"
+  },
+  {
+    "id": "wcw-fall-brawl-2000",
+    "title": "Fall Brawl 2000",
+    "year": 2000,
+    "director": "WCW",
+    "poster": "https://artworks.thetvdb.com/banners/movies/287332/posters/jigEjvkBrSdwOvXBSWBOFKoQgUr.jpg"
+  },
+  {
+    "id": "wcw-nitro",
+    "title": "WCW Nitro",
+    "year": 1995,
+    "director": "WCW",
+    "poster": "https://artworks.thetvdb.com/banners/posters/76962-3.jpg"
   }
 ]
